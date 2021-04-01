@@ -16,7 +16,7 @@ dividend|I|[DATA_WIDTH-1:0]|dividend
 divisor|I|[DATA_WIDTH-1:0]|divisor
 signed_ope|I||0:unsigned operation, 1:signed operation
 start|I||start (high pulse)
-flush|I|flush internal state (high pulse)
+flush|I||flush internal state (high pulse)
 quotient|O|[DATA_WIDTH-1:0]|quotient
 remainder|O|[DATA_WIDTH-1:0]|remainder
 ready|O||Indicates that qutient and remainder are ready (high level)
