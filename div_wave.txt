@@ -4,5 +4,5 @@
   {name: 'start', wave: '0.10.|...'},
   {name: 'divident/divisor', wave: 'x.7x.|...'}, 
   {name: 'ready', wave: '1..0.|.1.'},
-  {name: 'quotient/remainder', wave: 'x....|.7x'}, 
+  {name: 'quotient/remainder', wave: 'x....|.7.'}, 
 ]}
