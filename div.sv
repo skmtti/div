@@ -20,6 +20,7 @@ module div #(
   logic r_signed_ope;
   logic [COUNT_WIDTH-1:0] r_count;
   logic [DATA_WIDTH-1:0] r_quotient;
+  logic dividend_sign;
   logic r_dividend_sign;
   logic remainder_sign;
   logic [DATA_WIDTH:0] r_remainder;
@@ -33,6 +34,7 @@ module div #(
 
   assign ready = r_ready;
 
+  assign dividend_sign = dividend[DATA_WIDTH-1] & r_signed_ope;
   assign divisor_sign = r_divisor[DATA_WIDTH-1] & r_signed_ope;
   assign divisor_ext = {divisor_sign, r_divisor};
   assign remainder_sign = r_remainder[DATA_WIDTH];
@@ -56,7 +58,7 @@ module div #(
       quotient  = quotient - 1;
       remainder = remainder + divisor;
     end else if (remainder_sign ^ r_dividend_sign) begin
-      if (remainder_sign ^ (divisor_sign & r_signed_ope)) begin
+      if (remainder_sign ^ divisor_sign) begin
         quotient  = quotient - 1;
         remainder = remainder + divisor;
       end else begin
@@ -81,9 +83,8 @@ module div #(
         r_ready         <= #D1 1'b1;
       end else if (start) begin
         r_quotient      <= #D1 dividend;
-        r_dividend_sign <= #D1 dividend[DATA_WIDTH-1] & signed_ope;
-        r_remainder
-                <= #D1 {(DATA_WIDTH+1){signed_ope & dividend[DATA_WIDTH-1]}};
+        r_dividend_sign <= #D1 dividend_sign;
+        r_remainder     <= #D1 {(DATA_WIDTH+1){dividend_sign}};
         r_divisor       <= #D1 divisor;
         r_count         <= #D1 '0;
         r_ready         <= #D1 1'b0;
