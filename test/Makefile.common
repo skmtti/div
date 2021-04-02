@@ -1,11 +1,12 @@
-SRC = ../../div.sv ../../tb.sv
+SRC = ../../div.sv ../../tb.sv 
+TEST = ./test.h
 TB_TOP = tb 
 TOP = div
 OBJ = a.out
 
 all: run
 
-$(OBJ) : $(SRC)
+$(OBJ) : $(SRC) $(TEST)
 	iverilog -g2012 $(SRC) -s $(TB_TOP) $(OPT)
 
 run : $(OBJ)
