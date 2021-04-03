@@ -82,12 +82,18 @@ module div #(
         r_count         <= #D1 '0;
         r_ready         <= #D1 1'b1;
       end else if (start) begin
-        r_quotient      <= #D1 dividend;
-        r_dividend_sign <= #D1 w_dividend_sign;
-        r_remainder     <= #D1 {(DATA_WIDTH+1){w_dividend_sign}};
-        r_divisor       <= #D1 divisor;
+        // RISC-V's div by 0 spec
+        if (divisor == '0) begin
+            r_quotient  <= #D1 '1;
+            r_remainder <= #D1 {w_dividend_sign, dividend};
+        end else begin
+            r_quotient  <= #D1 dividend;
+            r_remainder <= #D1 {(DATA_WIDTH+1){w_dividend_sign}};
+            r_ready     <= #D1 1'b0;
+        end
         r_count         <= #D1 '0;
-        r_ready         <= #D1 1'b0;
+        r_dividend_sign <= #D1 w_dividend_sign;
+        r_divisor       <= #D1 divisor;
         r_signed_ope    <= #D1 signed_ope;
       end else if (~ready) begin
         r_quotient  <= #D1 {r_quotient[DATA_WIDTH-2:0], ~diff_sign};
