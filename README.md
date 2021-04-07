@@ -248,8 +248,7 @@ parameter|discription
 ---|---
 DATA_WIDTH|Data width of dividend and divisor|
 
-### Interface signals
-
+###### [](#header-6)ヘッダー 6
 
 テーブル（表）形式の記述です。
 
@@ -259,6 +258,14 @@ DATA_WIDTH|Data width of dividend and divisor|
 | out of stock | good and plenty   | nice  |
 | ok           | good `oreos`      | hmm   |
 | ok           | good `zoute` drop | yumm  |
+
+
+### 水平線
+
+次の方法で、水平線を描画できます。
+
+
+### Interface signals
 
 
 signal|I/O|width|discription
