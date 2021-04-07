@@ -249,6 +249,13 @@ parameter|discription
 DATA_WIDTH|Data width of dividend and divisor|
 
 ### Interface signals
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
 signal|I/O|width|discription
 ---|---|---|---
 clk |I||clock
