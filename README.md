@@ -26,4 +26,4 @@ ready|O||Indicates that qutient and remainder are ready (high level)
 
 ### Timing chart
 
-![div wave](https://github.com/skmtti/div/blob/figure/div_wave.svg)
+![div wave](https://github.com/skmtti/div/blob/figure/div_wave.png)
