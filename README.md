@@ -244,25 +244,10 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 It takes DATA_WIDTH+1 cycles until the operation result is output.
 
 ### Parameters
+
 parameter|discription
 ---|---
 DATA_WIDTH|Data width of dividend and divisor|
-
-###### [](#header-6)ヘッダー 6
-
-テーブル（表）形式の記述です。
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-
-### 水平線
-
-次の方法で、水平線を描画できます。
 
 
 ### Interface signals
@@ -282,4 +267,7 @@ remainder|O|[DATA_WIDTH-1:0]|remainder
 ready|O||Indicates that qutient and remainder are ready (high level)
 
 ### Timing chart
+
 ![div wave](https://github.com/skmtti/div/blob/figure/div_wave.svg)
+
+![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
