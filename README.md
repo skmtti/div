@@ -270,4 +270,4 @@ ready|O||Indicates that qutient and remainder are ready (high level)
 
 ![div wave](https://github.com/skmtti/div/blob/figure/div_wave.svg)
 
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+![](https://guides.github.com/activities/hello-world/branching.png)
