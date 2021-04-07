@@ -1,8 +1,3 @@
----
-layout: default
-title: div
----
-
 ## Signed/unsigned integer divider using non-restoring division algorithm
 It takes DATA_WIDTH+1 cycles until the operation result is output.
 
