@@ -2,6 +2,7 @@
   {name: 'clk', wave: 'p....|...'},
   {name: 'rst_n', wave: '01...|...'},
   {name: 'start', wave: '0.10.|...'},
+  {name: 'signed_ope', wave: 'x.2x.|...'}, 
   {name: 'divident/divisor', wave: 'x.7x.|...'}, 
   {name: 'ready', wave: '1..0.|.1.'},
   {name: 'quotient/remainder', wave: 'x....|.7.'}, 
