@@ -56,7 +56,7 @@ module div #(
       quotient  = quotient - 1;
       remainder = remainder + r_divisor;
     end else if (remainder_sign ^ r_dividend_sign) begin
-      if (remainder_sign ^ divisor_sign) begin
+      if (diff_sign) begin
         quotient  = quotient - 1;
         remainder = remainder + r_divisor;
       end else begin
